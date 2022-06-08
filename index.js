@@ -7,7 +7,12 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (names, fnCallback)=> {
-  return fnCallback(names)
+  hasil=[]
+  arrayData= fnCallback(names)
+  for(let x=0; x<names.length; x++){
+    hasil.push([x+1]+ ". " + names[x])
+  }
+  return hasil
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
